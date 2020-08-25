@@ -4,9 +4,13 @@
 }
 
 /* 画像サイズによってフォントサイズを変える */
-@mixin fontVw($fontSize: 10, $viewport: $X_LARGE_SCREEN_WIDTH) {
+@mixin fontVw($fontSize: 10, $viewport: $SMALL_SCREEN_WIDTH) {
   font-size: $fontSize * 1px;
   font-size: $fontSize / $viewport * 100vw;
+
+  @include mediumScreenWidthOver() {
+    font-size: #{$MEDIUM_SCREEN_WIDTH / $SMALL_SCREEN_WIDTH * $fontSize}px;
+  }
 }
 
 /* font-size, line-height, letter-spacingを出力 */
@@ -21,7 +25,7 @@
     letter-spacing: ($letterSpacing / $fontSize) * 1em;
   }
 
-  @include largeScreenWidthLess() {
+  @include largeScreenWidthOver() {
     @include fontVw($fontSize, $SMALL_SCREEN_WIDTH);
   }
 }
@@ -126,8 +130,7 @@
 
   @if ($px2rem) {
     #{$propaty}: px2rem($maxValue * 1px);
-  }
-  @else {
+  } @else {
     #{$propaty}: #{$maxValue * 1px};
   }
 

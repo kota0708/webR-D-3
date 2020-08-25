@@ -1,0 +1,52 @@
+$topImageWidth: 376;
+$topImageHeight: 699;
+
+.tp-Top_Wrap {
+  width: 100%;
+}
+
+.tp-Top_Inner {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    padding-top: percentage($topImageHeight / $topImageWidth);
+    display: block;
+  }
+}
+
+.tp-Top {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tp-Top_Image {
+  width: 100%;
+  display: block;
+}
+
+.tp-Top_First {
+  width: percentage(200 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  top: percentage(42 / $topImageHeight);
+  left: percentage(106 / $SMALL_SCREEN_WIDTH);
+}
+
+.tp-Top_second {
+  width: percentage(160 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  top: percentage(233 / $topImageHeight);
+  left: 0;
+  z-index: 1;
+}
+
+.tp-Top_third {
+  width: percentage(200 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  top: percentage(320 / $topImageHeight);
+  left: percentage(148 / $SMALL_SCREEN_WIDTH);
+}

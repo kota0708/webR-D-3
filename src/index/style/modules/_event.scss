@@ -1,0 +1,204 @@
+.tp-Event_Wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-Event_Bg_Wrap {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.tp-Event_Image {
+  width: 100%;
+  display: block;
+}
+
+.tp-Event_Inner {
+  width: 100%;
+  position: relative;
+  padding-bottom: percentage(187 / $SMALL_SCREEN_WIDTH);
+}
+
+.tp-Event_Shose {
+  width: percentage(208 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(30%);
+}
+
+.tp-Event_Release {
+  width: percentage(224 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tp-Event_Title_Wrap {
+  width: 100%;
+  padding: 50px 0 60px;
+}
+
+.tp-Event_Title {
+  margin-bottom: 16px;
+}
+
+$fontSize: 56;
+$lineHeight: 62;
+
+.tp-Event_Text_Wrap {
+  @include fontVw($fontSize);
+
+  color: $BG_TEXT;
+  line-height: 0.8;
+}
+
+.tp-Event_Title_Text {
+  overflow: hidden;
+  display: inline-flex;
+  text-transform: uppercase;
+}
+
+.tp-Event_Title_Text_Inner {
+  overflow: hidden;
+  padding: #{($lineHeight / $fontSize) - 1}em;
+  background-color: $TEXT_PRIMARY;
+}
+
+$fontSize: 13;
+$lineHeight: 18.85;
+
+.tp-Event_Description_Wrap {
+  @include fontVw($fontSize);
+
+  width: 100%;
+  color: $TEXT_PRIMARY;
+}
+
+.tp-Event_Description_Contents {
+  width: 100%;
+}
+
+.tp-Event_Description {
+  @include fontVw($fontSize);
+
+  display: inline-flex;
+  font-weight: bold;
+}
+
+.tp-Event_Description_Inner {
+  overflow: hidden;
+  padding: 0 #{($lineHeight / $fontSize) - 1}em;
+  background-color: $BG_TEXT;
+  white-space: nowrap;
+}
+
+.tp-Event_Contents_Wrap {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-Event_Contents_List {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tp-Event_Contents_Image_Text_Wrap {
+  width: percentage(62 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  left: percentage(17 / $SMALL_SCREEN_WIDTH);
+  top: 0;
+}
+
+.tp-Event_Contents_Image_Text_Wrap-reverse {
+  left: auto;
+  right: percentage(17 / $SMALL_SCREEN_WIDTH);
+}
+
+.tp-Event_Contents_List-reverse {
+  display: block;
+}
+
+.tp-Event_Contents {
+  width: percentage(300 / $SMALL_SCREEN_WIDTH);
+  position: relative;
+}
+
+.tp-Event_Contents-reverse {
+  overflow: hidden;
+}
+
+.tp-Event_Contents_Inner {
+  width: percentage(280 / 300);
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-Event_Contents_Inner-reverse {
+  float: left;
+}
+
+.tp-Event_Contents_Image_Wrap {
+  border: solid 2px $BG_TEXT;
+}
+
+.tp-Event_Contents_Text_Wrap {
+  padding: 10px 0;
+}
+
+.tp-Event_Contents_Text_Wrap-reverse {
+  padding: 10px 0 10px percentage(20 / 280);
+}
+
+$fontSize: 13;
+$lineHeight: 18.85;
+
+.tp-Event_Contents_Text_Inner {
+  overflow: hidden;
+}
+
+.tp-Event_Contents_Text {
+  @include fontVw($fontSize);
+
+  color: $TEXT_PRIMARY;
+  font-weight: bold;
+  display: inline-flex;
+  overflow: hidden;
+  line-height: 1;
+  padding: 0.2em;
+  letter-spacing: 0.01em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tp-Event_Contents_Label {
+  width: 100%;
+  display: block;
+}
+
+.tp-Event_Contents_Bg {
+  width: 100%;
+  height: 80.112044818%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $CAPTION01;
+}
+
+.tp-Event_Contents_Bg-reverse {
+  left: auto;
+  right: 0;
+  background-color: $CAPTION02;
+}
