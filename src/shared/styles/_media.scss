@@ -36,7 +36,7 @@
 }
 
 @mixin mediumScreenWidthOver() {
-  @media (min-width: (#{$MEDIUM_SCREEN_WIDTH + 1}px)) {
+  @media (min-width: (#{$MEDIUM_SCREEN_WIDTH - 1}px)) {
     @content;
   }
 }
