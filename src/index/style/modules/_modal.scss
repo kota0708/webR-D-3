@@ -1,0 +1,194 @@
+.tp-Modal_Wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.tp-Modal_Inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.tp-Modal_Bg {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tp-Modal_Bg-left {
+  background-image: url('/image/bg_left.jpg');
+  left: 0;
+}
+
+.tp-Modal_Bg-right {
+  background-image: url('/image/bg_right.jpg');
+  right: 0;
+}
+
+// 482 667
+// 56 667
+
+.tp-Modal_Contents_Wrap {
+  width: 100%;
+  max-width: 414px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tp-Modal_Menu_Image_Wrap {
+  width: percentage(207 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  bottom: percentage(79 / 667);
+  left: 0;
+  z-index: 3;
+
+  @include smallScreenWidthOver() {
+    width: 330px;
+  }
+}
+
+.tp-Modal_Menu_Bg_Image_Wrap {
+  width: percentage(221 / $SMALL_SCREEN_WIDTH);
+  height: 64px;
+  position: absolute;
+  bottom: percentage(91 / 667);
+  left: 0;
+  z-index: 2;
+  background-image: url('../image/img_logobg.png');
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.tp-Modal_Image_Wrap {
+  width: percentage(188 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.tp-Modal_Image {
+  width: 100%;
+  display: block;
+}
+
+.tp-Modal_Contents {
+  width: percentage(258 / $SMALL_SCREEN_WIDTH);
+  height: percentage(493 / 667);
+  position: absolute;
+  right: 0;
+  top: percentage(56 / 667);
+  z-index: 1;
+}
+
+.tp-Modal_Contents_Inner {
+  width: 100%;
+  height: 100%;
+  padding: percentage(12 / 258) 0 0 percentage(12 / 258);
+  position: relative;
+}
+
+.tp-Modal_Contents_Bg {
+  width: percentage(105 / 258);
+  height: percentage(449 / 493);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: $BG_APING_LOVESNEAKERS;
+}
+
+.tp-Modal_Contents_Item_Wrap {
+  width: 100%;
+  height: 100%;
+  background-color: $FOOTER;
+  position: relative;
+  z-index: 1;
+}
+
+// 246
+
+.tp-Modal_Contents_Item_Inner {
+  width: 100%;
+  height: 100%;
+  padding: percentage(54 / 246) 0 0 percentage(32 / 246);
+}
+
+// 214
+
+.tp-Modal_Contents_Item_List_Wrap {
+  width: 100%;
+  position: relative;
+  margin-bottom: percentage(24 / 214);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tp-Modal_Contents_Item_List_Bg {
+  width: calc(100% + 7px);
+  height: 100%;
+  position: absolute;
+  left: -7px;
+  bottom: -7px;
+  background-color: #000;
+  z-index: 0;
+}
+
+.tp-Modal_Contents_Item_List {
+  display: flex;
+  justify-content: flex-end;
+  padding: percentage(20 / 214) 30px percentage(20 / 214) 0;
+  background-color: $FOOTER;
+  border: solid 1px #000;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-Modal_Contents_Item_Text_Wrap {
+  width: 73px;
+}
+
+.tp-Modal_Contents_Item_Text_Wrap-event {
+  width: 117px;
+}
+
+.tp-Modal_Contents_Item_Text {
+  width: 100%;
+  display: block;
+}
+
+.tp-Modal_Label_Wrap {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: percentage(42 / 667);
+  z-index: 2;
+}
+
+.tp-Modal_Label {
+  width: 100%;
+  padding: 5px 0;
+  background-color: $BG_CSS_LOVESNEAKERS;
+}
+
+.tp-Modal_Label_Image {
+  padding: 0 3px;
+}
+
+.tp-Modal_Label_Inner,
+.swiper-wrapper {
+  transition-timing-function: linear;
+}

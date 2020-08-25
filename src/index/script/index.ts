@@ -1,27 +1,16 @@
-import gsap from 'gsap';
-import Swiper from 'swiper';
+import Swipe from './modules/_swiper';
 
 // import fragmentShader from './gl/fragmentShader.frag';
 // console.log(Swiper);
 
 (() => {
   window.addEventListener('DOMContentLoaded', () => {
-    const el = document.getElementById('js-swiper');
-    const swiper = new Swiper(el, {
-      slidesPerView: 3,
-      loopAdditionalSlides: 3,
-      centeredSlides: true,
-      allowTouchMove: false,
-      speed: 2000,
-      autoplay: {
-        delay: -100
-      },
-      loop: true
+    const swiper = new Swipe();
+
+    swiper.init();
+
+    window.addEventListener('resize', () => {
+      swiper.onResize();
     });
-
-    console.log(el);
-
-    console.log(gsap);
-    console.log(swiper);
   });
 })();
