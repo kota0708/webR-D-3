@@ -1,0 +1,18 @@
+.tp-Header_Wrap {
+  background-color: $FOOTER;
+}
+
+.tp-Header_Inner {
+  padding: percentage(12 / $SMALL_SCREEN_WIDTH) 0
+    percentage(54 / $SMALL_SCREEN_WIDTH);
+}
+
+.tp-Header_Contents {
+  width: percentage(214 / $SMALL_SCREEN_WIDTH);
+  margin: 0 auto;
+}
+
+.tp-Header_Image {
+  width: 100%;
+  display: block;
+}
