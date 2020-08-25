@@ -73,3 +73,20 @@
   transform: translateX(-50%);
   z-index: 1;
 }
+
+.tp-Footer_Label {
+  width: 100%;
+  padding: 5px 0;
+  background-color: $BG_CSS_LOVESNEAKERS;
+  position: relative;
+  z-index: 0;
+}
+
+.tp-Footer_Label_Image {
+  padding: 0 10px;
+}
+
+.tp-Footer_Label_Inner,
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
