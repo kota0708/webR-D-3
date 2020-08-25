@@ -1,7 +1,6 @@
 .tp-Event_Wrap {
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .tp-Event_Bg_Wrap {
@@ -29,6 +28,7 @@
   bottom: 0;
   right: 0;
   transform: translateY(30%);
+  z-index: 1;
 }
 
 .tp-Event_Release {

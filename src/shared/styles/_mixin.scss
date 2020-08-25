@@ -8,8 +8,8 @@
   font-size: $fontSize * 1px;
   font-size: $fontSize / $viewport * 100vw;
 
-  @include mediumScreenWidthOver() {
-    font-size: #{$MEDIUM_SCREEN_WIDTH / $SMALL_SCREEN_WIDTH * $fontSize}px;
+  @include smallScreenWidthOver() {
+    font-size: #{414 / $SMALL_SCREEN_WIDTH * $fontSize}px;
   }
 }
 

@@ -54,7 +54,7 @@
 }
 
 @mixin smallScreenWidthOver() {
-  @media (min-width: (#{$SMALL_SCREEN_WIDTH})px) {
+  @media (min-width: 414px) {
     @content;
   }
 }
