@@ -1,4 +1,5 @@
 import Swipe from './modules/_swiper';
+import Event from './modules/_event';
 
 // import fragmentShader from './gl/fragmentShader.frag';
 // console.log(Swiper);
@@ -10,11 +11,18 @@ import Swipe from './modules/_swiper';
     const modal = document.getElementById('js-modal');
 
     const swiper = new Swipe();
+    const event = new Event();
 
     swiper.init();
+    event.init();
 
     window.addEventListener('resize', () => {
       swiper.onResize();
+      event.onResize();
+    });
+
+    window.addEventListener('scroll', () => {
+      event.onScrill();
     });
 
     toggleWrap.addEventListener('click', () => {
