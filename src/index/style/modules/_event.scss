@@ -179,6 +179,15 @@ $lineHeight: 18.85;
   float: left;
 }
 
+.tp-Event_Contents_New_Wrap {
+  width: percentage(111 / $SMALL_SCREEN_WIDTH);
+  position: absolute;
+  left: percentage(19 / $SMALL_SCREEN_WIDTH);
+  top: 0;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
 .tp-Event_Contents_Image_Wrap {
   position: relative;
   z-index: 100;
