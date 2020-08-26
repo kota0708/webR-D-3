@@ -4,21 +4,27 @@ import Menu from './modules/_menu';
 
 (() => {
   window.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swipe();
-    const event = new Event();
-    const menu = new Menu();
+    window.addEventListener('load', () => {
+      const wrap = document.getElementById('js-wrap');
 
-    swiper.init();
-    event.init();
-    menu.init();
+      wrap.classList.add('open');
 
-    window.addEventListener('resize', () => {
-      swiper.onResize();
-      event.onResize();
-    });
+      const swiper = new Swipe();
+      const event = new Event();
+      const menu = new Menu();
 
-    window.addEventListener('scroll', () => {
-      event.onScroll();
+      swiper.init();
+      event.init();
+      menu.init();
+
+      window.addEventListener('resize', () => {
+        swiper.onResize();
+        event.onResize();
+      });
+
+      window.addEventListener('scroll', () => {
+        event.onScroll();
+      });
     });
   });
 })();
