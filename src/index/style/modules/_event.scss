@@ -64,7 +64,16 @@ $lineHeight: 62;
 }
 
 .tp-Event_Title_Text_Inner {
+  width: 0;
   overflow: hidden;
+  transition: width 0.3s ease;
+
+  &.open {
+    width: 100%;
+  }
+}
+
+.tp-Event_Title_Text_Label {
   padding: #{($lineHeight / $fontSize) - 1}em;
   background-color: $TEXT_PRIMARY;
 }
@@ -91,10 +100,19 @@ $lineHeight: 18.85;
 }
 
 .tp-Event_Description_Inner {
+  width: 0;
   overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+
+  &.open {
+    width: 100%;
+  }
+}
+
+.tp-Event_Description_Label {
   padding: 0 #{($lineHeight / $fontSize) - 1}em;
   background-color: $BG_TEXT;
-  white-space: nowrap;
 }
 
 .tp-Event_Contents_Wrap {
@@ -217,8 +235,7 @@ $lineHeight: 18.85;
 }
 
 .tp-Event_Contents_Image_Bg-reverse {
-  left: auto;
-  right: 0;
+  left: 0;
 }
 
 .tp-Event_Contents_Text_Wrap {
@@ -267,7 +284,6 @@ $lineHeight: 18.85;
 }
 
 .tp-Event_Contents_Bg-reverse {
-  left: auto;
-  right: 0;
+  left: 0;
   background-color: $CAPTION02;
 }

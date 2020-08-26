@@ -14,12 +14,16 @@ const offset = 200;
 
 class Event {
   private events: HTMLElement[];
+  private texts: HTMLElement[];
   private datas: TData[];
+  private datasText: TData[];
   private scrollBottom: number;
 
   constructor() {
     this.events = makeArray(document.querySelectorAll('.js-event'));
+    this.texts = makeArray(document.querySelectorAll('.js-event-text'));
     this.datas = [];
+    this.datasText = [];
     this.scrollBottom = 0;
   }
 
@@ -31,6 +35,14 @@ class Event {
   // スクロールイベントで使うデータを格納
   private setData(): void {
     this.datas = this.events.map((r: HTMLElement) => {
+      return {
+        el: r,
+        top: offsetTop(r) + offset,
+        isAnimation: false
+      };
+    });
+
+    this.datasText = this.texts.map((r: HTMLElement) => {
       return {
         el: r,
         top: offsetTop(r) + offset,
@@ -53,6 +65,16 @@ class Event {
 
   // スクロールイベント
   private onEventScroll(): void {
+    this.datasText.forEach((r: TData) => {
+      const { el, top, isAnimation } = r;
+
+      if (top < this.scrollBottom && !isAnimation) {
+        el.classList.add('open');
+
+        r.isAnimation = true;
+      }
+    });
+
     this.datas.forEach((r: TData) => {
       const { el, top, isAnimation } = r;
 
@@ -90,6 +112,17 @@ class Event {
   public onResize(): void {
     // データを再セット
     this.datas = this.datas.map((r: TData) => {
+      const { el, isAnimation } = r;
+
+      return {
+        el,
+        top: offsetTop(el),
+        isAnimation
+      };
+    });
+
+    // データを再セット
+    this.datasText = this.datasText.map((r: TData) => {
       const { el, isAnimation } = r;
 
       return {
