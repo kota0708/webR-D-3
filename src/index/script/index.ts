@@ -21,7 +21,7 @@ import Menu from './modules/_menu';
     });
 
     window.addEventListener('scroll', () => {
-      event.onScrill();
+      event.onScroll();
     });
   });
 })();

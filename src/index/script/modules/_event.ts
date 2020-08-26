@@ -39,7 +39,7 @@ class Event {
     });
   }
 
-  public onScrill(): void {
+  public onScroll(): void {
     this.setScroll();
     this.onEventScroll();
   }
