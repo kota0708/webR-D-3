@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100000;
+  z-index: 10;
   padding: 16px;
 
   @include smallScreenWidthOver() {

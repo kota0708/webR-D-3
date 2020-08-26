@@ -2,8 +2,21 @@
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes yoyo-menu {
+  0% {
+    transform: scaleY(1);
+  }
+  60% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1.1);
   }
 }
 

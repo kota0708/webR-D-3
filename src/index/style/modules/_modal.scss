@@ -143,10 +143,29 @@
   width: 100%;
   position: relative;
   margin-bottom: percentage(24 / 214);
+  transform-origin: bottom left;
+  transform: scale(0);
+  transition: transform 0.2s $easeOutBack;
+  cursor: pointer;
+
+  &:hover {
+    .tp-Modal_Contents_Item_List_Inner {
+      animation: none;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  &.open {
+    transform: scale(1);
+  }
+}
+
+.tp-Modal_Contents_Item_List_Inner {
+  animation: yoyo-menu 1.1s infinite alternate forwards $easeInBack;
+  transform-origin: bottom;
 }
 
 .tp-Modal_Contents_Item_List_Bg {
