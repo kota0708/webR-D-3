@@ -47,6 +47,8 @@
   &.open {
     .tp-menu_Toggle_Line {
       transform: translate3d(0, 10px, 0) rotate(155deg);
+      background-color: #df00a1;
+      border-color: #ffe600;
 
       &:nth-child(2) {
         opacity: 0;
@@ -69,7 +71,8 @@
   left: 0;
   top: 0;
   // transform: translateY(10px) rotate(135deg);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
   transform-origin: center center;
   z-index: 1;
 
