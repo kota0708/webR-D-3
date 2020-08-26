@@ -149,8 +149,10 @@
   cursor: pointer;
 
   &:hover {
-    .tp-Modal_Contents_Item_List_Inner {
-      animation: none;
+    @include mediumScreenWidthOver() {
+      .tp-Modal_Contents_Item_List_Inner {
+        animation: none;
+      }
     }
   }
 
