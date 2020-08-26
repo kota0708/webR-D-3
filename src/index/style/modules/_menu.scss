@@ -44,11 +44,18 @@
   position: relative;
   cursor: pointer;
 
+  &:hover {
+    @include mediumScreenWidthOver() {
+      .tp-menu_Toggle_Line {
+        background-color: #df00a1;
+        border-color: #ffe600;
+      }
+    }
+  }
+
   &.open {
     .tp-menu_Toggle_Line {
       transform: translate3d(0, 10px, 0) rotate(155deg);
-      background-color: #df00a1;
-      border-color: #ffe600;
 
       &:nth-child(2) {
         opacity: 0;

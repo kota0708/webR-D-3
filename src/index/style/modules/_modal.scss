@@ -166,6 +166,7 @@
 .tp-Modal_Contents_Item_List_Inner {
   animation: yoyo-menu 1.1s infinite alternate forwards $easeInBack;
   transform-origin: bottom;
+  display: block;
 }
 
 .tp-Modal_Contents_Item_List_Bg {
