@@ -134,10 +134,38 @@ $lineHeight: 18.85;
 .tp-Event_Contents {
   width: percentage(300 / $SMALL_SCREEN_WIDTH);
   position: relative;
+
+  &:hover {
+    .tp-Event_Contents_Image_Wrap {
+      animation: yoyo 0.5s infinite alternate forwards linear;
+    }
+
+    .tp-Event_Contents_Text_Wrap {
+      animation: yoyo 0.5s 0.1s infinite alternate forwards linear;
+    }
+
+    .tp-Event_Contents_Bg {
+      animation: yoyo 0.5s 0.1s infinite alternate forwards linear;
+    }
+  }
 }
 
 .tp-Event_Contents-reverse {
   overflow: hidden;
+
+  &:hover {
+    .tp-Event_Contents_Image_Wrap-reverse {
+      animation: yoyo-reverse 0.5s infinite alternate forwards linear;
+    }
+
+    .tp-Event_Contents_Text_Wrap-reverse {
+      animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards linear;
+    }
+
+    .tp-Event_Contents_Bg-reverse {
+      animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards linear;
+    }
+  }
 }
 
 .tp-Event_Contents_Inner {
@@ -153,6 +181,11 @@ $lineHeight: 18.85;
 
 .tp-Event_Contents_Image_Wrap {
   position: relative;
+  z-index: 100;
+}
+
+.tp-Event_Contents_Image_Wrap-reverse {
+  width: 100%;
 }
 
 .tp-Event_Contents_Image {
@@ -220,6 +253,8 @@ $lineHeight: 18.85;
   bottom: 0;
   left: 0;
   background-color: $CAPTION01;
+  transform: translate3d(0, 0, 0);
+  transition: transform 2s linear;
 }
 
 .tp-Event_Contents_Bg-reverse {

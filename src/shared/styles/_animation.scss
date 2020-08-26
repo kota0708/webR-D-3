@@ -1,3 +1,21 @@
+@keyframes yoyo {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes yoyo-reverse {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
 // =======================================
 // EASEING
 // =======================================
