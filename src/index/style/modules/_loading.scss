@@ -1,0 +1,56 @@
+.tp-Loading_Wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  &.close {
+    display: none;
+  }
+}
+
+.tp-Loading_Inner {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.tp-Loading_Label {
+  width: 100%;
+  padding: 5px 0;
+  background-color: $BG_CSS_LOVESNEAKERS;
+  position: relative;
+  z-index: 0;
+
+  &.pink {
+    background-color: $FOOTER;
+  }
+
+  &.red {
+    background-color: $LOADING_RED;
+  }
+
+  &.blue {
+    background-color: $BG_CSS_LOVESNEAKERS;
+  }
+
+  &.orange {
+    background-color: $LOADING_ORANGE;
+  }
+}
+
+.tp-Loading_Label_Image {
+  padding: 0 3px;
+}
+
+.tp-Loading_Label_Inner,
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.tp-Loading_Image {
+  width: 100%;
+  display: block;
+}

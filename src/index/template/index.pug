@@ -6,19 +6,21 @@ block vars
 
 block main
   .sw-Wrap
+    include ./modules/_loading
     #js-circle-wrap.sw-Wrap_Circle_Wrap
       .sw-Wrap_Circle_Inner
         .js-circle.sw-Wrap_Circle
         .js-circle.sw-Wrap_Circle
         .js-circle.sw-Wrap_Circle
-    .sw-Wrap_Bg.sw-Wrap_Bg-left
-    .sw-Wrap_Bg.sw-Wrap_Bg-right
-    .sw-Wrap_Label.sw-Wrap_Label-left
-    .sw-Wrap_Label.sw-Wrap_Label-right
-    .sw-Wrap_Label.sw-Wrap_Label-right-back
-    include ./modules/_modal
-    include ./modules/_menu
-    include ./modules/_header
-    include ./modules/_top
-    include ./modules/_event
-    include ./modules/_footer
+    .sw-Inner
+      .sw-Wrap_Bg.sw-Wrap_Bg-left
+      .sw-Wrap_Bg.sw-Wrap_Bg-right
+      .sw-Wrap_Label.sw-Wrap_Label-left
+      .sw-Wrap_Label.sw-Wrap_Label-right
+      .sw-Wrap_Label.sw-Wrap_Label-right-back
+      include ./modules/_modal
+      include ./modules/_menu
+      include ./modules/_header
+      include ./modules/_top
+      include ./modules/_event
+      include ./modules/_footer
