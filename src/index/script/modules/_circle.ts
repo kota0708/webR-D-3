@@ -5,10 +5,17 @@ import { makeArray } from '../../../shared/scripts/make-array';
 class Circle {
   private circleWrap: HTMLElement;
   private circles: HTMLElement[];
+  private image: HTMLElement;
 
   constructor() {
     this.circleWrap = document.getElementById('js-circle-wrap');
     this.circles = makeArray(document.querySelectorAll('.js-circle'));
+
+    this.image = document.getElementById('js-top-apng');
+
+    const a = APNG.animateImage(this.image);
+
+    console.log(a);
   }
 
   public onAnimation(callBack: () => void): void {
@@ -38,7 +45,7 @@ class Circle {
 
           gsap.to(this.circleWrap, {
             opacity: 0,
-            duration: 0.4,
+            duration: 0.1,
             ease: 'power2.out',
             onComplete: () => {
               window.setTimeout(() => {

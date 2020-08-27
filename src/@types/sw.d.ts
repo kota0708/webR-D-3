@@ -1,5 +1,7 @@
 declare var env: string;
 
+declare var APNG: any;
+
 interface Document {
   createStyleSheet: any;
   cssText: string;
