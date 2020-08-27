@@ -6,7 +6,7 @@
   z-index: 10;
   padding: 16px;
 
-  @include smallScreenWidthOver() {
+  @include mediumScreenWidthOver() {
     padding: 32px 30px;
   }
 }

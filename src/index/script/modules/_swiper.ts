@@ -74,6 +74,7 @@ class Swipe {
     this.elLoaders.forEach((r: HTMLElement, i: number) => {
       const slidesPerView = Number(r.dataset.slidesperview);
       const speed = Number(r.dataset.speed);
+      const direction = Number(r.dataset.direction);
 
       const swipe = new Swiper(r, {
         slidesPerView,
@@ -82,7 +83,8 @@ class Swipe {
         allowTouchMove: false,
         speed,
         autoplay: {
-          delay: 0
+          delay: 0,
+          reverseDirection: !!(direction === 1)
         },
         breakpoints: {
           1130: {

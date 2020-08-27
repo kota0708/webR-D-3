@@ -60,7 +60,7 @@
   left: 0;
   z-index: 3;
 
-  @include smallScreenWidthOver() {
+  @include mediumScreenWidthOver() {
     width: 330px;
   }
 }
@@ -100,7 +100,8 @@
   z-index: 1;
 
   @include mediumScreenWidthOver() {
-    width: percentage(340 / $SMALL_SCREEN_WIDTH);
+    width: 345px;
+    height: 648px;
   }
 }
 
@@ -119,6 +120,10 @@
   left: 0;
   z-index: 0;
   background-color: $BG_APING_LOVESNEAKERS;
+
+  @include mediumScreenWidthOver() {
+    height: 604px;
+  }
 }
 
 .tp-Modal_Contents_Item_Wrap {
@@ -160,12 +165,6 @@
 .tp-Modal_Contents_Item_List_Inner {
   transform-origin: bottom;
   display: block;
-
-  &:hover {
-    @include mediumScreenWidthOver() {
-      animation: yoyo-menu 0.3s alternate forwards $easeInBack;
-    }
-  }
 }
 
 .tp-Modal_Contents_Item_List_Bg {

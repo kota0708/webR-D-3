@@ -1,6 +1,7 @@
 .tp-Event_Wrap {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .tp-Event_Bg_Wrap {
@@ -156,15 +157,15 @@ $lineHeight: 18.85;
   &:hover {
     @include mediumScreenWidthOver() {
       .tp-Event_Contents_Image_Wrap {
-        animation: yoyo 0.5s infinite alternate forwards linear;
+        animation: yoyo 0.5s infinite alternate forwards $easeInOutSine;
       }
 
       .tp-Event_Contents_Text_Wrap {
-        animation: yoyo 0.5s 0.1s infinite alternate forwards linear;
+        animation: yoyo 0.5s 0.1s infinite alternate forwards $easeInOutSine;
       }
 
       .tp-Event_Contents_Bg {
-        animation: yoyo 0.5s 0.1s infinite alternate forwards linear;
+        animation: yoyo 0.5s 0.1s infinite alternate forwards $easeInOutSine;
       }
     }
   }
@@ -176,15 +177,17 @@ $lineHeight: 18.85;
   &:hover {
     @include mediumScreenWidthOver() {
       .tp-Event_Contents_Image_Wrap-reverse {
-        animation: yoyo-reverse 0.5s infinite alternate forwards linear;
+        animation: yoyo-reverse 0.5s infinite alternate forwards $easeInOutSine;
       }
 
       .tp-Event_Contents_Text_Wrap-reverse {
-        animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards linear;
+        animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards
+          $easeInOutSine;
       }
 
       .tp-Event_Contents_Bg-reverse {
-        animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards linear;
+        animation: yoyo-reverse 0.5s 0.1s infinite alternate forwards
+          $easeInOutSine;
       }
     }
   }
@@ -225,7 +228,17 @@ $lineHeight: 18.85;
   display: block;
   z-index: 1;
   opacity: 0;
-  border: solid 2px $BG_TEXT;
+  border-left: solid 2px $BG_TEXT;
+  border-top: solid 2px $BG_TEXT;
+  border-bottom: solid 2px $BG_TEXT;
+}
+
+.tp-Event_Contents_Image-reverse {
+  width: 100%;
+  border-left: 0;
+  border-right: solid 2px $BG_TEXT;
+  border-top: solid 2px $BG_TEXT;
+  border-bottom: solid 2px $BG_TEXT;
 }
 
 .tp-Event_Contents_Image_Bg {

@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 import { makeArray } from '../../../shared/scripts/make-array';
 import Circle from './_circle';
 
@@ -32,6 +34,16 @@ class Menu {
     this.lists.forEach((r: HTMLElement) => {
       r.addEventListener('click', () => {
         this.onClickList();
+      });
+
+      r.addEventListener('mouseenter', () => {
+        gsap.to(r, {
+          yoyo: true,
+          repeat: 1,
+          scaleY: 1.2,
+          duration: 0.6,
+          ease: 'bounce.in'
+        });
       });
     });
   }
