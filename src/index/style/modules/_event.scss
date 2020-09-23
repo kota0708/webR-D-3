@@ -35,7 +35,7 @@
 .tp-Event_Release {
   width: percentage(224 / $SMALL_SCREEN_WIDTH);
   position: absolute;
-  top: 0;
+  top: 5.800464037%;
   right: 0;
 }
 
@@ -75,8 +75,10 @@ $lineHeight: 62;
 }
 
 .tp-Event_Title_Text_Label {
+  font-family: din-condensed, sans-serif;
   padding: #{($lineHeight / $fontSize) - 1}em;
   background-color: $TEXT_PRIMARY;
+  font-weight: 400;
 }
 
 $fontSize: 13;
@@ -304,6 +306,7 @@ $lineHeight: 18.85;
 .tp-Event_Contents_Label {
   width: 100%;
   display: block;
+  letter-spacing: 0.01em;
 }
 
 .tp-Event_Contents_Bg {
