@@ -82,6 +82,7 @@ class Event {
         const bg = el.querySelector('.js-event-bg');
         const imageBg = el.querySelector('.js-event-image-bg');
         const image = el.querySelector('.js-event-image');
+        const imageLazy = el.querySelector('.js-event-image-lazy');
         const text = el.querySelector('.js-event-text');
 
         gsap.to(bg, {
@@ -102,6 +103,18 @@ class Event {
           delay: 0.7,
           opacity: 1,
           ease: 'power3.out'
+        });
+
+        gsap.to(imageLazy, {
+          duration: 0.4,
+          delay: 0.7,
+          opacity: 1,
+          ease: 'power3.out',
+          onComplete: () => {
+            setTimeout(() => {
+              imageLazy.remove();
+            }, 500);
+          }
         });
 
         r.isAnimation = true;
