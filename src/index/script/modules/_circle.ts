@@ -49,7 +49,7 @@ class Circle {
 
           gsap.to(r, {
             borderWidth: 0,
-            duration: 1,
+            duration: isSp ? 1 : 2,
             ease: 'power2.out',
             onComplete: () => {
               count++;
