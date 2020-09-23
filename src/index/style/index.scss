@@ -116,14 +116,19 @@
   bottom: 0;
   transform: scale(0);
   transform-origin: center;
-  background-color: $LOADING_PINK;
+  // background-color: $LOADING_PINK;
+  // border-width: 10000px;
+  border-style: solid;
+  border-color: $LOADING_PINK;
   border-radius: 100%;
 
   &:nth-child(2) {
-    background-color: $LOADING_RED;
+    // background-color: $LOADING_RED;
+    border-color: $LOADING_RED;
   }
 
   &:nth-child(3) {
-    background-color: $LOADING_NAVY;
+    // background-color: $LOADING_NAVY;
+    border-color: $LOADING_NAVY;
   }
 }

@@ -19,6 +19,8 @@ class Circle {
   }
 
   public onAnimation(callBack: () => void): void {
+    let count = 0;
+
     this.circles.forEach((r: HTMLElement, i: number) => {
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -32,6 +34,10 @@ class Circle {
         visibility: 'visible'
       });
 
+      gsap.set(r, {
+        borderWidth: `${width}px`
+      });
+
       gsap.to(r, {
         scale: rate,
         transformOrigin: 'center',
@@ -39,24 +45,23 @@ class Circle {
         ease: 'none',
         delay: i * 0.3,
         onComplete: () => {
-          if (i + 1 !== this.circles.length) {
-            return;
-          }
+          count++;
 
-          gsap.to(this.circleWrap, {
-            opacity: 0,
-            duration: 0.1,
+          gsap.to(r, {
+            borderWidth: 0,
+            duration: 1,
             ease: 'power2.out',
             onComplete: () => {
-              window.setTimeout(() => {
+              count++;
+
+              if (count >= 3) {
                 gsap.set(this.circleWrap, {
                   visibility: 'hidden'
                 });
-
                 gsap.set(this.circles, {
                   scale: 0
                 });
-              }, 500);
+              }
             }
           });
 
